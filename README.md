@@ -62,8 +62,18 @@ name = "S1"
 port = 3336
 
 [[target]]
-name = "SP"
-url = "stratum+tcp://stratum.slushpool.com:3333"
+name = "SP1"
+url = "stratum+tcp://radioactive.sytes.net:1027"
+user_identity = "braiins.fp"
+
+[[target]]
+name = "SP2"
+url = "stratum+tcp://radioactive.sytes.net:1029"
+user_identity = "braiins.fp"
+
+[[target]]
+name = "SP3"
+url = "stratum+tcp://radioactive.sytes.net:1030"
 user_identity = "braiins.fp"
 
 [[routing]]
@@ -74,8 +84,9 @@ from = ["S1"]
 name = "Primary Goal"
 
 [[routing.goal.level]]
-targets = ["SP"]
+targets = ["SP1", "SP2", "SP3"]
 ```
+
 
 ### Braiins Farm Monitor Configutation
 Configuration for a farm, where miners have IP addresses in the IP ranges `1.2.0.*`, `1.2.*.2`, `1.3.0.*` and `1.3.*.2`.
