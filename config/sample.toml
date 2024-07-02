@@ -9,9 +9,31 @@ port = 3336
 
 [[target]]
 # Name of this target
-name = "SP"
+name = "SP1"
 # Pool URL
-url = "stratum+tcp://stratum.slushpool.com:3333"
+url = "stratum+tcp://radioactive.sytes.net:1027"
+# Mining identity that FP should perform initial authorization with.
+# Format: `<tag>[.<worker_name>]`
+user_identity = "userName.workerName"
+# Maximum number of mining session aggregated per connection
+#aggregation = 50
+
+[[target]]
+# Name of this target
+name = "SP2"
+# Pool URL
+url = "stratum+tcp://radioactive.sytes.net:1029"
+# Mining identity that FP should perform initial authorization with.
+# Format: `<tag>[.<worker_name>]`
+user_identity = "userName.workerName"
+# Maximum number of mining session aggregated per connection
+#aggregation = 50
+
+[[target]]
+# Name of this target
+name = "SP3"
+# Pool URL
+url = "stratum+tcp://radioactive.sytes.net:1030"
 # Mining identity that FP should perform initial authorization with.
 # Format: `<tag>[.<worker_name>]`
 user_identity = "userName.workerName"
@@ -32,4 +54,4 @@ name = "Primary Goal"
 
 [[routing.goal.level]]
 # Targets that HR will be sent to for this Goal
-targets = ["SP"]
+targets = ["SP1", "SP2", "SP3"]
