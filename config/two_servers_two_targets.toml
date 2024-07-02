@@ -10,13 +10,18 @@ port = 3337
 
 # Full target configuration
 [[target]]
-name = "SP-US"
-url = "stratum+tcp://us-east.stratum.slushpool.com/"
+name = "SP1"
+url = "stratum+tcp://radioactive.sytes.net:1027"
 user_identity = "userName.workerName"
 
 [[target]]
-name = "SP-EU"
-url = "stratum+tcp://eu.stratum.slushpool.com"
+name = "SP2"
+url = "stratum+tcp://radioactive.sytes.net:1029"
+user_identity = "userName.workerName"
+
+[[target]]
+name = "SP3"
+url = "stratum+tcp://radioactive.sytes.net:1030"
 user_identity = "userName.workerName"
 
 [[routing]]
@@ -27,7 +32,4 @@ hr_weight = 100
 name = "Goal 100%"
 
 [[routing.goal.level]]
-targets = ["SP-US"]
-
-[[routing.goal.level]]
-targets = ["SP-EU"]
+targets = ["SP1", "SP2", "SP3"]
