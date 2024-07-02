@@ -5,8 +5,18 @@ name = "S1"
 port = 3336
 
 [[target]]
-name = "SP"
-url = "stratum+tcp://stratum.slushpool.com:3333"
+name = "SP1"
+url = "stratum+tcp://radioactive.sytes.net:1027"
+user_identity = "userName.workerName"
+
+[[target]]
+name = "SP2"
+url = "stratum+tcp://radioactive.sytes.net:1029"
+user_identity = "userName.workerName"
+
+[[target]]
+name = "SP3"
+url = "stratum+tcp://radioactive.sytes.net:1030"
 user_identity = "userName.workerName"
 
 [[routing]]
@@ -16,4 +26,4 @@ from = ["S1"]
 name = "Primary Goal"
 
 [[routing.goal.level]]
-targets = ["SP"]
+targets = ["SP1", "SP2", "SP3"]
